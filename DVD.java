@@ -1,4 +1,4 @@
-public class DVD {
+public class DVD extends Document {
 	private String titre;
 	private int duree; // durée du DVD en minutes
 	private Domaine domaine;
@@ -16,6 +16,7 @@ public class DVD {
 	}
 
 	/* ---[Affichage]--- */
+	@Override
 	public String toString() {
 		return "DVD :\ntitre : " + titre + "\nduree : " + duree + " min\ndomaine : " + domaine;
 	}

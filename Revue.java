@@ -1,4 +1,4 @@
-public class Revue {
+public class Revue extends Document {
 	private int numero;
 	private String titre;
 	private Domaine domaine;
@@ -19,6 +19,7 @@ public class Revue {
 	}
 
 	/* ---[Affichage]--- */
+	@Override
 	public String toString() {
 		return "Revue :\nnumero : " + numero + "\ntitre : " + titre + "\ndomaine : " + domaine + "\nannée : " + annee;
 	}

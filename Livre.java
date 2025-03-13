@@ -1,4 +1,4 @@
-public class Livre {
+public class Livre extends Document {
 	private String auteur;
 	private String titre;
 	private String editeur;
@@ -12,6 +12,7 @@ public class Livre {
 	}
 
 	/* ---[Affichage]--- */
+	@Override
 	public String toString() {
 		return "Livre :\nauteur : " + auteur + "\ntitre : " + titre + "\nediteur : " + editeur + "\nannée : " + annee;
 	}
