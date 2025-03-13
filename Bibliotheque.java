@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Bibliotheque {
 	public static final int LEN_MAX = 32;
 	private Document[] contenu;
@@ -26,14 +24,15 @@ public class Bibliotheque {
 	public String toString() {
 		String docList = "";
 
-		for (int i = 0; i < nbDoc; i++) {
+		for (int i = 0; i < nbDoc - 1; i++) {
 			docList += contenu[i].toString() + "\n\n";
 		}
+		docList += contenu[nbDoc - 1].toString() + "\n";
 
-		return "Bibliotheque :\n---[Documents]---\n" + docList;
+		return "Bibliotheque :\n~~~[Documents]~~~\n" + docList + "~~~~~~~~~~~~~~~~~\n";
 	}
 
-	public String getDocFromAuthor(String autheur) {
+	public String getDocFromAuthor(String auteur) {
 		String docs = "";
 
 		for (int i = 0; i < nbDoc; i++) {
@@ -42,7 +41,7 @@ public class Bibliotheque {
 			// puisque seul les livres ont un champ auteur,
 			// puis vérifie que l'auteur du livre est le même que celui en argument
 			if (currentDoc instanceof Livre
-					&& autheur.equals(((Livre) currentDoc).getAuteur())) {
+					&& auteur.equals(((Livre) currentDoc).getAuteur())) {
 				docs += currentDoc.toString() + "\n\n";
 			}
 		}
