@@ -15,6 +15,7 @@ public class Test {
 		System.out.println(killBill.toString() + "\n");
 
 		/* ===[Test de Bibliotheque]=== */
+		/*---[Question 9]---*/
 		Bibliotheque b = new Bibliotheque();
 		b.addDocument(leCapital);
 		b.addDocument(nature);
@@ -28,14 +29,30 @@ public class Test {
 		System.out.println("===[Affichage des livres de Karl Marx dans la Bibliotheque]===");
 		System.out.println(b.getDocFromAuthor("Karl Marx"));
 
+		/*---[Question 10]---*/
 		String auteur;
 		Scanner input = new Scanner(System.in);
 
 		System.out.print("Entrez le nom d'un auteur dont vous voulez trouver les oeuvres : ");
 		auteur = input.nextLine();
 
-		System.out.printf("===[Oeuvres de %s]===\n", auteur);
+		System.out.printf("===[Oeuvres de %s dans la Bibliotheque]===\n", auteur);
 		System.out.println(b.getDocFromAuthor(auteur));
 		input.close();
+
+		/* ===[Test de Bibliotheque2]=== */
+		/*---[Question 11]---*/
+		Bibliotheque b2 = new Bibliotheque();
+		b2.addDocument(leCapital);
+		b2.addDocument(nature);
+		b2.addDocument(genderTrouble);
+		b2.addDocument(killBill);
+		b2.addDocument(leCapital2);
+
+		System.out.println("===[Affichage de la Bibliotheque2]===");
+		System.out.println(b2.toString());
+
+		System.out.println("===[Affichage des livres de Karl Marx dans la Bibliotheque2]===");
+		System.out.println(b2.getDocFromAuthor("Karl Marx"));
 	}
 }

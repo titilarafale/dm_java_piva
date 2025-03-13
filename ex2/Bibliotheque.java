@@ -29,7 +29,7 @@ public class Bibliotheque {
 		}
 		docList += contenu[nbDoc - 1].toString() + "\n";
 
-		return "Bibliotheque :\n~~~[Documents]~~~\n" + docList + "~~~~~~~~~~~~~~~~~\n";
+		return "Bibliotheque :\n~~~[Documents]~~~\n" + docList + "~~~~~~~~~~~~~~~~~\n\n";
 	}
 
 	public String getDocFromAuthor(String auteur) {
