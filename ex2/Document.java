@@ -1,4 +1,3 @@
-public class Document {
-
-	public String tString;
+public abstract class Document {
+	public abstract String toString();
 }
