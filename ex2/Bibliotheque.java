@@ -37,9 +37,6 @@ public class Bibliotheque {
 
 		for (int i = 0; i < nbDoc; i++) {
 			Document currentDoc = contenu[i];
-			// cast currentDoc en livre si il en est une instance,
-			// puisque seul les livres ont un champ auteur,
-			// puis vérifie que l'auteur du livre est le même que celui en argument
 			if (currentDoc instanceof Livre
 					&& auteur.equals(((Livre) currentDoc).getAuteur())) {
 				docs += currentDoc.toString() + "\n\n";
